@@ -217,20 +217,6 @@ def get_oauth_token(uid, password):
         "uid": uid
     }
 
-    # response = requests.post(url, headers=headers, json=data)
-    # response_json = response.json()
-    
-    # if response.status_code == 200:
-    #     print("Response Code:", response.status_code)
-    #     print("UID:", response_json["data"]["uid"])
-    #     print("Open ID:", response_json["data"]["open_id"])
-    #     print("Access Token:", response_json["data"]["access_token"])
-    #     open_id = response_json["data"]["open_id"]
-    #     access_token = response_json["data"]["access_token"]
-    #     return response_json["data"]["open_id"], response_json["data"]["access_token"]
-    # else:
-    #     print("Failed to retrieve token. Response Code:", response.status_code)
-    #     print("Response Body:", response.text)
     try:
         response = requests.post(url, headers=headers, json=data)
         response_json = response.json()
